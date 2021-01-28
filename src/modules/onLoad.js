@@ -9,26 +9,34 @@ const onLoad = () => {
   const navbar = document.createElement("nav");
   navbar.classList.add("navbar");
   navbar.innerHTML = `
+  <div>
   <h3>RiverBoat</h3>
   <ul>
   <li><a href='#' id="home_link">Home</a></li>
   <li><a href='#' id="menu_link">Menu</a></li>
   <li><a href='#' id="contact_link">Contact</a></li>
-  </ul>`;
+  </ul>
+  </div>`;
 
   //RENDER HEADER
   const header = document.createElement("header");
   header.classList.add("header");
-  header.innerHTML = "<h1>River Boat Restaurant</h1>";
+  header.innerHTML = "<div><h1>River Boat Restaurant</h1></div>";
 
   //RENDER MAIN CONTENT AREA
   const mainContent = document.createElement("main");
   mainContent.classList.add("mainContent");
 
+  //RENDER FOOTER
+  const footer = document.createElement("footer");
+  footer.classList.add("footer");
+  footer.innerHTML = `<footer class="footer"><div>All images and content used with permission or under appropriate license. </div></footer>`;
+
   //APPEND ITEMS TO CONTAINER
   container.appendChild(navbar);
   container.appendChild(header);
   container.appendChild(mainContent);
+  container.appendChild(footer);
 
   //add event listeners to nav
   document
